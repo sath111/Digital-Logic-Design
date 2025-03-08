@@ -1,1 +1,1 @@
-# CE118
+Digital Logic Design
