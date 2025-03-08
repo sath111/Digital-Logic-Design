@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\thietkeluanliso\NEW\QUEUERAM\simulation\qsim
+vQUEUERAM
+Z1 !s100 ?DXI63cgQLb=_^1@fFMJh0
+Z2 IOP?9UU=GJZYbag0Sl`dR50
+Z3 Vk6j60k:3>XK1KXIaF_E3Z2
+Z4 dE:\thietkeluanliso\NEW\QUEUERAM\simulation\qsim
+Z5 w1733197512
+Z6 8QUEUERAM.vo
+Z7 FQUEUERAM.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|QUEUERAM.vo|
+Z10 o-work work -O0
+Z11 n@q@u@e@u@e@r@a@m
+!i10b 1
+!s85 0
+Z12 !s108 1733197513.433000
+Z13 !s107 QUEUERAM.vo|
+!s101 -O0
+vQUEUERAM_vlg_check_tst
+!i10b 1
+Z14 !s100 a9Ok1iinmb1FkJGdT>Mm72
+Z15 I8?jlh>;M?AC`3fl0aMAB@0
+Z16 VKo1PUmI93RmRfA95RLL6D1
+R4
+Z17 w1733197511
+Z18 8QUEUERAM.vt
+Z19 FQUEUERAM.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1733197513.539000
+Z21 !s107 QUEUERAM.vt|
+Z22 !s90 -work|work|QUEUERAM.vt|
+!s101 -O0
+R10
+Z23 n@q@u@e@u@e@r@a@m_vlg_check_tst
+vQUEUERAM_vlg_sample_tst
+!i10b 1
+Z24 !s100 @QUCB?SeQKWCFdh1VILUl3
+Z25 IDIG0V<3eioFJ;YT1zafOc1
+Z26 VBB9cR94L@>S7[n[<_9aQe3
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@q@u@e@u@e@r@a@m_vlg_sample_tst
+vQUEUERAM_vlg_vec_tst
+!i10b 1
+Z28 !s100 JC8JPfM]WohgPOV]i30Ja1
+Z29 IF[cX3aI469n@J6fWVOCa;3
+Z30 VBAY<lQa08?hUT[fT@_VAB0
+R4
+R17
+R18
+R19
+Z31 L0 533
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@q@u@e@u@e@r@a@m_vlg_vec_tst
