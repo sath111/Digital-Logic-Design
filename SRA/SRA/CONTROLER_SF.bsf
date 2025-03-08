@@ -1,0 +1,113 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 368 256)
+	(text "CONTROLER_SF" (rect 5 0 100 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 152 0)
+		(input)
+		(text "START" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "START" (rect 144 25 158 65)(font "Arial" (font_size 8))(vertical))
+		(line (pt 152 0)(pt 152 17))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 155 44 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "RST" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "RST" (rect 21 139 44 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 304 32)
+		(output)
+		(text "SELECT_R1" (rect 112 0 179 14)(font "Arial" (font_size 8)))
+		(text "SELECT_R1" (rect 216 27 283 41)(font "Arial" (font_size 8)))
+		(line (pt 304 32)(pt 288 32))
+	)
+	(port
+		(pt 304 48)
+		(output)
+		(text "SELECT_R2[1..0]" (rect 112 0 207 14)(font "Arial" (font_size 8)))
+		(text "SELECT_R2[1..0]" (rect 188 43 283 57)(font "Arial" (font_size 8)))
+		(line (pt 304 48)(pt 288 48)(line_width 3))
+	)
+	(port
+		(pt 304 64)
+		(output)
+		(text "EN_R1" (rect 112 0 149 14)(font "Arial" (font_size 8)))
+		(text "EN_R1" (rect 246 59 283 73)(font "Arial" (font_size 8)))
+		(line (pt 304 64)(pt 288 64))
+	)
+	(port
+		(pt 304 80)
+		(output)
+		(text "EN_R2" (rect 112 0 149 14)(font "Arial" (font_size 8)))
+		(text "EN_R2" (rect 246 75 283 89)(font "Arial" (font_size 8)))
+		(line (pt 304 80)(pt 288 80))
+	)
+	(port
+		(pt 304 96)
+		(output)
+		(text "EN_R3" (rect 112 0 149 14)(font "Arial" (font_size 8)))
+		(text "EN_R3" (rect 246 91 283 105)(font "Arial" (font_size 8)))
+		(line (pt 304 96)(pt 288 96))
+	)
+	(port
+		(pt 304 112)
+		(output)
+		(text "SELECT_R1_R3" (rect 112 0 201 14)(font "Arial" (font_size 8)))
+		(text "SELECT_R1_R3" (rect 194 107 283 121)(font "Arial" (font_size 8)))
+		(line (pt 304 112)(pt 288 112))
+	)
+	(port
+		(pt 304 128)
+		(output)
+		(text "ABS_MAX[1..0]" (rect 112 0 200 14)(font "Arial" (font_size 8)))
+		(text "ABS_MAX[1..0]" (rect 195 123 283 137)(font "Arial" (font_size 8)))
+		(line (pt 304 128)(pt 288 128)(line_width 3))
+	)
+	(port
+		(pt 304 144)
+		(output)
+		(text "ABS_MIN[2..0]" (rect 112 0 193 14)(font "Arial" (font_size 8)))
+		(text "ABS_MIN[2..0]" (rect 202 139 283 153)(font "Arial" (font_size 8)))
+		(line (pt 304 144)(pt 288 144)(line_width 3))
+	)
+	(port
+		(pt 152 192)
+		(output)
+		(text "DONE" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "DONE" (rect 144 135 158 168)(font "Arial" (font_size 8))(vertical))
+		(line (pt 152 192)(pt 152 176))
+	)
+	(drawing
+		(rectangle (rect 16 16 288 176))
+	)
+)

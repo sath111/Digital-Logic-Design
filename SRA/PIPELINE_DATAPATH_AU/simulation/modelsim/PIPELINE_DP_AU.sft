@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (Verilog)"
+set corner_file_list {
+	{{"Slow Model"} {PIPELINE_DP_AU.vo PIPELINE_DP_AU_v.sdo}}
+	{{"Fast Model"} {PIPELINE_DP_AU_fast.vo PIPELINE_DP_AU_v_fast.sdo}}
+}

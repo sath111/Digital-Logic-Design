@@ -1,0 +1,162 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 288 416)
+	(text "DATAPATH_AU_PIPELINE" (rect 143 288 289 302)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 336 25 348)(font "Arial" ))
+	(port
+		(pt 0 304)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 24 296 47 310)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 16 304))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "RST" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "RST" (rect 21 315 44 329)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 16 320))
+	)
+	(port
+		(pt 80 0)
+		(input)
+		(text "A[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "A[15..0]" (rect 72 25 86 69)(font "Arial" (font_size 8))(vertical))
+		(line (pt 80 0)(pt 80 17)(line_width 3))
+	)
+	(port
+		(pt 144 0)
+		(input)
+		(text "B[15..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "B[15..0]" (rect 136 25 150 68)(font "Arial" (font_size 8))(vertical))
+		(line (pt 144 0)(pt 144 17)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "W_R1" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "W_R1" (rect 25 88 59 102)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "W_R2" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "W_R2" (rect 21 107 55 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "W_R3" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "W_R3" (rect 21 123 55 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "TRI_R11" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "TRI_R11" (rect 21 139 68 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "TRI_R12" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "TRI_R12" (rect 21 155 68 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "TRI_R2" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "TRI_R2" (rect 21 171 61 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "TRI_R3" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "TRI_R3" (rect 21 187 61 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "OPCODE[2..0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "OPCODE[2..0]" (rect 21 203 98 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "TRI_SH3" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "TRI_SH3" (rect 21 219 69 233)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "TRI_A" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "TRI_A" (rect 21 59 55 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "TRI_BUS3" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "TRI_BUS3" (rect 21 235 77 249)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 16 240))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "TRI_BUS4" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "TRI_BUS4" (rect 21 251 77 265)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 16 256))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "TRI_B" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "TRI_B" (rect 21 75 54 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "TRI_SH1" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "TRI_SH1" (rect 21 267 69 281)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 16 272))
+	)
+	(port
+		(pt 112 352)
+		(output)
+		(text "OUTPORT[15..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "OUTPORT[15..0]" (rect 104 236 118 328)(font "Arial" (font_size 8))(vertical))
+		(line (pt 112 352)(pt 112 336)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 336))
+	)
+)
