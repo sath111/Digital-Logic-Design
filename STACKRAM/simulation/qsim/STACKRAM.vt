@@ -1,0 +1,736 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "09/30/2024 22:16:44"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    STACKRAM
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module STACKRAM_vlg_sample_tst(
+	CLK,
+	DINH,
+	DINH-1,
+	EN,
+	IN,
+	POP,
+	SDINH,
+	SDINH-1,
+	sampler_tx
+);
+input  CLK;
+input [3:0] DINH;
+input [3:0] DINH-1;
+input  EN;
+input [7:0] IN;
+input  POP;
+input  SDINH;
+input  SDINH-1;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLK or DINH or DINH-1 or EN or IN or POP or SDINH or SDINH-1)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module STACKRAM_vlg_check_tst (
+	OUTPUT,
+	SODINH,
+	SODINH-1,
+	sampler_rx
+);
+input [7:0] OUTPUT;
+input [3:0] SODINH;
+input [3:0] SODINH-1;
+input sampler_rx;
+
+reg [7:0] OUTPUT_expected;
+reg [3:0] SODINH_expected;
+reg [3:0] SODINH-1_expected;
+
+reg [7:0] OUTPUT_prev;
+reg [3:0] SODINH_prev;
+reg [3:0] SODINH-1_prev;
+
+reg [7:0] OUTPUT_expected_prev;
+reg [3:0] SODINH_expected_prev;
+reg [3:0] SODINH-1_expected_prev;
+
+reg [7:0] last_OUTPUT_exp;
+reg [3:0] last_SODINH_exp;
+reg [3:0] last_SODINH-1_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:3] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 3'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	OUTPUT_prev = OUTPUT;
+	SODINH_prev = SODINH;
+	SODINH-1_prev = SODINH-1;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	OUTPUT_expected_prev = OUTPUT_expected;
+	SODINH_expected_prev = SODINH_expected;
+	SODINH-1_expected_prev = SODINH-1_expected;
+end
+
+
+// expected \OUTPUT [ 7 ]
+initial
+begin
+	OUTPUT_expected[7] = 1'bX;
+end 
+// expected \OUTPUT [ 6 ]
+initial
+begin
+	OUTPUT_expected[6] = 1'bX;
+end 
+// expected \OUTPUT [ 5 ]
+initial
+begin
+	OUTPUT_expected[5] = 1'bX;
+end 
+// expected \OUTPUT [ 4 ]
+initial
+begin
+	OUTPUT_expected[4] = 1'bX;
+end 
+// expected \OUTPUT [ 3 ]
+initial
+begin
+	OUTPUT_expected[3] = 1'bX;
+end 
+// expected \OUTPUT [ 2 ]
+initial
+begin
+	OUTPUT_expected[2] = 1'bX;
+end 
+// expected \OUTPUT [ 1 ]
+initial
+begin
+	OUTPUT_expected[1] = 1'bX;
+end 
+// expected \OUTPUT [ 0 ]
+initial
+begin
+	OUTPUT_expected[0] = 1'bX;
+end 
+// expected SODINH[ 3 ]
+initial
+begin
+	SODINH_expected[3] = 1'bX;
+end 
+// expected SODINH[ 2 ]
+initial
+begin
+	SODINH_expected[2] = 1'bX;
+end 
+// expected SODINH[ 1 ]
+initial
+begin
+	SODINH_expected[1] = 1'bX;
+end 
+// expected SODINH[ 0 ]
+initial
+begin
+	SODINH_expected[0] = 1'bX;
+end 
+// expected \SODINH-1 [ 3 ]
+initial
+begin
+	SODINH-1_expected[3] = 1'bX;
+end 
+// expected \SODINH-1 [ 2 ]
+initial
+begin
+	SODINH-1_expected[2] = 1'bX;
+end 
+// expected \SODINH-1 [ 1 ]
+initial
+begin
+	SODINH-1_expected[1] = 1'bX;
+end 
+// expected \SODINH-1 [ 0 ]
+initial
+begin
+	SODINH-1_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(OUTPUT_expected or OUTPUT or SODINH_expected or SODINH or SODINH-1_expected or SODINH-1)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected OUTPUT = %b | expected SODINH = %b | expected SODINH-1 = %b | ",OUTPUT_expected_prev,SODINH_expected_prev,SODINH-1_expected_prev);
+	$display("| real OUTPUT = %b | real SODINH = %b | real SODINH-1 = %b | ",OUTPUT_prev,SODINH_prev,SODINH-1_prev);
+`endif
+	if (
+		( OUTPUT_expected_prev[0] !== 1'bx ) && ( OUTPUT_prev[0] !== OUTPUT_expected_prev[0] )
+		&& ((OUTPUT_expected_prev[0] !== last_OUTPUT_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[0] = OUTPUT_expected_prev[0];
+	end
+	if (
+		( OUTPUT_expected_prev[1] !== 1'bx ) && ( OUTPUT_prev[1] !== OUTPUT_expected_prev[1] )
+		&& ((OUTPUT_expected_prev[1] !== last_OUTPUT_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[1] = OUTPUT_expected_prev[1];
+	end
+	if (
+		( OUTPUT_expected_prev[2] !== 1'bx ) && ( OUTPUT_prev[2] !== OUTPUT_expected_prev[2] )
+		&& ((OUTPUT_expected_prev[2] !== last_OUTPUT_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[2] = OUTPUT_expected_prev[2];
+	end
+	if (
+		( OUTPUT_expected_prev[3] !== 1'bx ) && ( OUTPUT_prev[3] !== OUTPUT_expected_prev[3] )
+		&& ((OUTPUT_expected_prev[3] !== last_OUTPUT_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[3] = OUTPUT_expected_prev[3];
+	end
+	if (
+		( OUTPUT_expected_prev[4] !== 1'bx ) && ( OUTPUT_prev[4] !== OUTPUT_expected_prev[4] )
+		&& ((OUTPUT_expected_prev[4] !== last_OUTPUT_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[4] = OUTPUT_expected_prev[4];
+	end
+	if (
+		( OUTPUT_expected_prev[5] !== 1'bx ) && ( OUTPUT_prev[5] !== OUTPUT_expected_prev[5] )
+		&& ((OUTPUT_expected_prev[5] !== last_OUTPUT_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[5] = OUTPUT_expected_prev[5];
+	end
+	if (
+		( OUTPUT_expected_prev[6] !== 1'bx ) && ( OUTPUT_prev[6] !== OUTPUT_expected_prev[6] )
+		&& ((OUTPUT_expected_prev[6] !== last_OUTPUT_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[6] = OUTPUT_expected_prev[6];
+	end
+	if (
+		( OUTPUT_expected_prev[7] !== 1'bx ) && ( OUTPUT_prev[7] !== OUTPUT_expected_prev[7] )
+		&& ((OUTPUT_expected_prev[7] !== last_OUTPUT_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTPUT[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTPUT_expected_prev);
+		$display ("     Real value = %b", OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_OUTPUT_exp[7] = OUTPUT_expected_prev[7];
+	end
+	if (
+		( SODINH_expected_prev[0] !== 1'bx ) && ( SODINH_prev[0] !== SODINH_expected_prev[0] )
+		&& ((SODINH_expected_prev[0] !== last_SODINH_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH_expected_prev);
+		$display ("     Real value = %b", SODINH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_SODINH_exp[0] = SODINH_expected_prev[0];
+	end
+	if (
+		( SODINH_expected_prev[1] !== 1'bx ) && ( SODINH_prev[1] !== SODINH_expected_prev[1] )
+		&& ((SODINH_expected_prev[1] !== last_SODINH_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH_expected_prev);
+		$display ("     Real value = %b", SODINH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_SODINH_exp[1] = SODINH_expected_prev[1];
+	end
+	if (
+		( SODINH_expected_prev[2] !== 1'bx ) && ( SODINH_prev[2] !== SODINH_expected_prev[2] )
+		&& ((SODINH_expected_prev[2] !== last_SODINH_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH_expected_prev);
+		$display ("     Real value = %b", SODINH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_SODINH_exp[2] = SODINH_expected_prev[2];
+	end
+	if (
+		( SODINH_expected_prev[3] !== 1'bx ) && ( SODINH_prev[3] !== SODINH_expected_prev[3] )
+		&& ((SODINH_expected_prev[3] !== last_SODINH_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH_expected_prev);
+		$display ("     Real value = %b", SODINH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_SODINH_exp[3] = SODINH_expected_prev[3];
+	end
+	if (
+		( SODINH-1_expected_prev[0] !== 1'bx ) && ( SODINH-1_prev[0] !== SODINH-1_expected_prev[0] )
+		&& ((SODINH-1_expected_prev[0] !== last_SODINH-1_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH-1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH-1_expected_prev);
+		$display ("     Real value = %b", SODINH-1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_SODINH-1_exp[0] = SODINH-1_expected_prev[0];
+	end
+	if (
+		( SODINH-1_expected_prev[1] !== 1'bx ) && ( SODINH-1_prev[1] !== SODINH-1_expected_prev[1] )
+		&& ((SODINH-1_expected_prev[1] !== last_SODINH-1_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH-1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH-1_expected_prev);
+		$display ("     Real value = %b", SODINH-1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_SODINH-1_exp[1] = SODINH-1_expected_prev[1];
+	end
+	if (
+		( SODINH-1_expected_prev[2] !== 1'bx ) && ( SODINH-1_prev[2] !== SODINH-1_expected_prev[2] )
+		&& ((SODINH-1_expected_prev[2] !== last_SODINH-1_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH-1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH-1_expected_prev);
+		$display ("     Real value = %b", SODINH-1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_SODINH-1_exp[2] = SODINH-1_expected_prev[2];
+	end
+	if (
+		( SODINH-1_expected_prev[3] !== 1'bx ) && ( SODINH-1_prev[3] !== SODINH-1_expected_prev[3] )
+		&& ((SODINH-1_expected_prev[3] !== last_SODINH-1_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SODINH-1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SODINH-1_expected_prev);
+		$display ("     Real value = %b", SODINH-1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_SODINH-1_exp[3] = SODINH-1_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module STACKRAM_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg [3:0] DINH;
+reg [3:0] DINH-1;
+reg EN;
+reg [7:0] IN;
+reg POP;
+reg SDINH;
+reg SDINH-1;
+// wires                                               
+wire [7:0] OUTPUT;
+wire [3:0] SODINH;
+wire [3:0] SODINH-1;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+STACKRAM i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.DINH(DINH),
+	.\DINH-1 (DINH-1),
+	.EN(EN),
+	.IN(IN),
+	.\OUTPUT (OUTPUT),
+	.POP(POP),
+	.SDINH(SDINH),
+	.\SDINH-1 (SDINH-1),
+	.SODINH(SODINH),
+	.\SODINH-1 (SODINH-1)
+);
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #20000 1'b1;
+	#20000;
+end 
+
+// SDINH
+initial
+begin
+	SDINH = 1'b0;
+	SDINH = #10000 1'b1;
+	SDINH = #20000 1'b0;
+end 
+// DINH[ 3 ]
+initial
+begin
+	DINH[3] = 1'b0;
+end 
+// DINH[ 2 ]
+initial
+begin
+	DINH[2] = 1'b0;
+end 
+// DINH[ 1 ]
+initial
+begin
+	DINH[1] = 1'b0;
+end 
+// DINH[ 0 ]
+initial
+begin
+	DINH[0] = 1'b0;
+	DINH[0] = #10000 1'b1;
+	DINH[0] = #20000 1'b0;
+end 
+
+// SDINH-1
+initial
+begin
+	SDINH-1 = 1'b0;
+	SDINH-1 = #10000 1'b1;
+	SDINH-1 = #20000 1'b0;
+end 
+// \DINH-1 [ 3 ]
+initial
+begin
+	DINH-1[3] = 1'b0;
+end 
+// \DINH-1 [ 2 ]
+initial
+begin
+	DINH-1[2] = 1'b0;
+end 
+// \DINH-1 [ 1 ]
+initial
+begin
+	DINH-1[1] = 1'b0;
+end 
+// \DINH-1 [ 0 ]
+initial
+begin
+	DINH-1[0] = 1'b0;
+end 
+
+// EN
+initial
+begin
+	EN = 1'b0;
+	EN = #10000 1'b1;
+	EN = #20000 1'b0;
+	EN = #20000 1'b1;
+	EN = #20000 1'b0;
+	EN = #60000 1'b1;
+	EN = #20000 1'b0;
+	EN = #60000 1'b1;
+	EN = #20000 1'b0;
+	EN = #60000 1'b1;
+	EN = #20000 1'b0;
+	EN = #60000 1'b1;
+	EN = #20000 1'b0;
+	EN = #70000 1'b1;
+	EN = #10000 1'b0;
+	EN = #30000 1'b1;
+	EN = #10000 1'b0;
+	EN = #20000 1'b1;
+	EN = #20000 1'b0;
+	EN = #60000 1'b1;
+	EN = #20000 1'b0;
+	EN = #60000 1'b1;
+	EN = #20000 1'b0;
+	EN = #20000 1'b1;
+	EN = #20000 1'b0;
+	EN = #20000 1'b1;
+	EN = #20000 1'b0;
+end 
+
+// POP
+initial
+begin
+	POP = 1'b0;
+	POP = #460000 1'b1;
+	POP = #10000 1'b0;
+	POP = #30000 1'b1;
+	POP = #10000 1'b0;
+	POP = #180000 1'b1;
+	POP = #20000 1'b0;
+	POP = #20000 1'b1;
+	POP = #20000 1'b0;
+	POP = #20000 1'b1;
+	POP = #20000 1'b0;
+end 
+// IN[ 7 ]
+initial
+begin
+	IN[7] = 1'b0;
+	IN[7] = #120000 1'b1;
+	IN[7] = #40000 1'b0;
+	IN[7] = #40000 1'b1;
+	IN[7] = #40000 1'b0;
+	IN[7] = #40000 1'b1;
+	IN[7] = #40000 1'b0;
+	IN[7] = #200000 1'b1;
+	IN[7] = #40000 1'b0;
+end 
+// IN[ 6 ]
+initial
+begin
+	IN[6] = 1'b0;
+	IN[6] = #40000 1'b1;
+	IN[6] = #40000 1'b0;
+	IN[6] = #40000 1'b1;
+	IN[6] = #40000 1'b0;
+	IN[6] = #40000 1'b1;
+	IN[6] = #40000 1'b0;
+	IN[6] = #40000 1'b1;
+	IN[6] = #40000 1'b0;
+	IN[6] = #40000 1'b1;
+	IN[6] = #40000 1'b0;
+	IN[6] = #200000 1'b1;
+	IN[6] = #40000 1'b0;
+end 
+// IN[ 5 ]
+initial
+begin
+	IN[5] = 1'b0;
+	IN[5] = #40000 1'b1;
+	IN[5] = #40000 1'b0;
+	IN[5] = #120000 1'b1;
+	IN[5] = #40000 1'b0;
+	IN[5] = #40000 1'b1;
+	IN[5] = #40000 1'b0;
+	IN[5] = #40000 1'b1;
+	IN[5] = #40000 1'b0;
+	IN[5] = #200000 1'b1;
+	IN[5] = #40000 1'b0;
+end 
+// IN[ 4 ]
+initial
+begin
+	IN[4] = 1'b0;
+	IN[4] = #120000 1'b1;
+	IN[4] = #40000 1'b0;
+	IN[4] = #120000 1'b1;
+	IN[4] = #40000 1'b0;
+	IN[4] = #40000 1'b1;
+	IN[4] = #40000 1'b0;
+	IN[4] = #200000 1'b1;
+	IN[4] = #40000 1'b0;
+end 
+// IN[ 3 ]
+initial
+begin
+	IN[3] = 1'b0;
+	IN[3] = #40000 1'b1;
+	IN[3] = #40000 1'b0;
+	IN[3] = #40000 1'b1;
+	IN[3] = #40000 1'b0;
+	IN[3] = #40000 1'b1;
+	IN[3] = #40000 1'b0;
+	IN[3] = #40000 1'b1;
+	IN[3] = #40000 1'b0;
+	IN[3] = #40000 1'b1;
+	IN[3] = #40000 1'b0;
+	IN[3] = #200000 1'b1;
+	IN[3] = #40000 1'b0;
+end 
+// IN[ 2 ]
+initial
+begin
+	IN[2] = 1'b0;
+	IN[2] = #40000 1'b1;
+	IN[2] = #40000 1'b0;
+	IN[2] = #40000 1'b1;
+	IN[2] = #40000 1'b0;
+	IN[2] = #120000 1'b1;
+	IN[2] = #40000 1'b0;
+	IN[2] = #200000 1'b1;
+	IN[2] = #40000 1'b0;
+	IN[2] = #40000 1'b1;
+	IN[2] = #40000 1'b0;
+end 
+// IN[ 1 ]
+initial
+begin
+	IN[1] = 1'b0;
+	IN[1] = #40000 1'b1;
+	IN[1] = #40000 1'b0;
+	IN[1] = #40000 1'b1;
+	IN[1] = #40000 1'b0;
+	IN[1] = #40000 1'b1;
+	IN[1] = #40000 1'b0;
+	IN[1] = #40000 1'b1;
+	IN[1] = #40000 1'b0;
+	IN[1] = #40000 1'b1;
+	IN[1] = #40000 1'b0;
+	IN[1] = #200000 1'b1;
+	IN[1] = #40000 1'b0;
+end 
+// IN[ 0 ]
+initial
+begin
+	IN[0] = 1'b0;
+	IN[0] = #40000 1'b1;
+	IN[0] = #40000 1'b0;
+	IN[0] = #200000 1'b1;
+	IN[0] = #40000 1'b0;
+	IN[0] = #40000 1'b1;
+	IN[0] = #40000 1'b0;
+end 
+
+STACKRAM_vlg_sample_tst tb_sample (
+	.CLK(CLK),
+	.DINH(DINH),
+	.DINH-1(DINH-1),
+	.EN(EN),
+	.IN(IN),
+	.POP(POP),
+	.SDINH(SDINH),
+	.SDINH-1(SDINH-1),
+	.sampler_tx(sampler)
+);
+
+STACKRAM_vlg_check_tst tb_out(
+	.OUTPUT(OUTPUT),
+	.SODINH(SODINH),
+	.SODINH-1(SODINH-1),
+	.sampler_rx(sampler)
+);
+endmodule
+

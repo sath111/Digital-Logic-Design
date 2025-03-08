@@ -1,0 +1,113 @@
+|UPDOWNCOUNTER4BITLOAD
+C <= HAS:inst10.Ci1
+D => HAS:inst10.A
+D => HAS:inst8.A
+D => HAS:inst6.A
+D => HAS:inst.A
+O[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst11.CLK
+CLK => inst9.CLK
+CLK => inst7.CLK
+CLK => inst5.CLK
+S => MUX2TO1:inst2.S
+S => MUX2TO1:inst3.S
+S => MUX2TO1:inst4.S
+S => MUX2TO1:inst12.S
+I[0] => MUX2TO1:inst12.B
+I[1] => MUX2TO1:inst4.B
+I[2] => MUX2TO1:inst3.B
+I[3] => MUX2TO1:inst2.B
+EN => HAS:inst.Ci
+
+
+|UPDOWNCOUNTER4BITLOAD|HAS:inst10
+Ci1 <= 7.DB_MAX_OUTPUT_PORT_TYPE
+Qi => inst7.IN0
+Qi => inst3.IN0
+Qi => inst5.IN1
+Ci => inst7.IN1
+Ci => inst6.IN1
+Ci => inst.IN0
+Ci => inst4.IN0
+A => 1.IN0
+A => inst6.IN2
+Di <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UPDOWNCOUNTER4BITLOAD|MUX2TO1:inst2
+Y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+S => inst3.IN1
+S => inst2.IN0
+A => inst.IN0
+
+
+|UPDOWNCOUNTER4BITLOAD|MUX2TO1:inst3
+Y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+S => inst3.IN1
+S => inst2.IN0
+A => inst.IN0
+
+
+|UPDOWNCOUNTER4BITLOAD|HAS:inst8
+Ci1 <= 7.DB_MAX_OUTPUT_PORT_TYPE
+Qi => inst7.IN0
+Qi => inst3.IN0
+Qi => inst5.IN1
+Ci => inst7.IN1
+Ci => inst6.IN1
+Ci => inst.IN0
+Ci => inst4.IN0
+A => 1.IN0
+A => inst6.IN2
+Di <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UPDOWNCOUNTER4BITLOAD|HAS:inst6
+Ci1 <= 7.DB_MAX_OUTPUT_PORT_TYPE
+Qi => inst7.IN0
+Qi => inst3.IN0
+Qi => inst5.IN1
+Ci => inst7.IN1
+Ci => inst6.IN1
+Ci => inst.IN0
+Ci => inst4.IN0
+A => 1.IN0
+A => inst6.IN2
+Di <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UPDOWNCOUNTER4BITLOAD|HAS:inst
+Ci1 <= 7.DB_MAX_OUTPUT_PORT_TYPE
+Qi => inst7.IN0
+Qi => inst3.IN0
+Qi => inst5.IN1
+Ci => inst7.IN1
+Ci => inst6.IN1
+Ci => inst.IN0
+Ci => inst4.IN0
+A => 1.IN0
+A => inst6.IN2
+Di <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UPDOWNCOUNTER4BITLOAD|MUX2TO1:inst4
+Y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+S => inst3.IN1
+S => inst2.IN0
+A => inst.IN0
+
+
+|UPDOWNCOUNTER4BITLOAD|MUX2TO1:inst12
+Y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+S => inst3.IN1
+S => inst2.IN0
+A => inst.IN0
+
+
