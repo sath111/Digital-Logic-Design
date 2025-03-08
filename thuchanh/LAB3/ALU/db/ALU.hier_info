@@ -1,0 +1,1126 @@
+|ALU
+OVERFLOW <= AU:inst.OVERFLOW
+A[0] => AU:inst.A[0]
+A[0] => LU:inst1.A[0]
+A[1] => AU:inst.A[1]
+A[1] => LU:inst1.A[1]
+A[2] => AU:inst.A[2]
+A[2] => LU:inst1.A[2]
+A[3] => AU:inst.A[3]
+A[3] => LU:inst1.A[3]
+A[4] => AU:inst.A[4]
+A[4] => LU:inst1.A[4]
+A[5] => AU:inst.A[5]
+A[5] => LU:inst1.A[5]
+A[6] => AU:inst.A[6]
+A[6] => LU:inst1.A[6]
+A[7] => AU:inst.A[7]
+A[7] => LU:inst1.A[7]
+A[8] => AU:inst.A[8]
+A[8] => LU:inst1.A[8]
+A[9] => AU:inst.A[9]
+A[9] => LU:inst1.A[9]
+A[10] => AU:inst.A[10]
+A[10] => LU:inst1.A[10]
+A[11] => AU:inst.A[11]
+A[11] => LU:inst1.A[11]
+A[12] => AU:inst.A[12]
+A[12] => LU:inst1.A[12]
+A[13] => AU:inst.A[13]
+A[13] => LU:inst1.A[13]
+A[14] => AU:inst.A[14]
+A[14] => LU:inst1.A[14]
+A[15] => AU:inst.A[15]
+A[15] => LU:inst1.A[15]
+B[0] => AU:inst.B[0]
+B[0] => LU:inst1.B[0]
+B[1] => AU:inst.B[1]
+B[1] => LU:inst1.B[1]
+B[2] => AU:inst.B[2]
+B[2] => LU:inst1.B[2]
+B[3] => AU:inst.B[3]
+B[3] => LU:inst1.B[3]
+B[4] => AU:inst.B[4]
+B[4] => LU:inst1.B[4]
+B[5] => AU:inst.B[5]
+B[5] => LU:inst1.B[5]
+B[6] => AU:inst.B[6]
+B[6] => LU:inst1.B[6]
+B[7] => AU:inst.B[7]
+B[7] => LU:inst1.B[7]
+B[8] => AU:inst.B[8]
+B[8] => LU:inst1.B[8]
+B[9] => AU:inst.B[9]
+B[9] => LU:inst1.B[9]
+B[10] => AU:inst.B[10]
+B[10] => LU:inst1.B[10]
+B[11] => AU:inst.B[11]
+B[11] => LU:inst1.B[11]
+B[12] => AU:inst.B[12]
+B[12] => LU:inst1.B[12]
+B[13] => AU:inst.B[13]
+B[13] => LU:inst1.B[13]
+B[14] => AU:inst.B[14]
+B[14] => LU:inst1.B[14]
+B[15] => AU:inst.B[15]
+B[15] => LU:inst1.B[15]
+OPCODE[0] => AU:inst.SELECT[0]
+OPCODE[0] => LU:inst1.SELECT[0]
+OPCODE[1] => AU:inst.SELECT[1]
+OPCODE[1] => LU:inst1.SELECT[1]
+OPCODE[2] => MUX2TO116BIT:inst3.SELECT
+O[0] <= MUX2TO116BIT:inst3.O[0]
+O[1] <= MUX2TO116BIT:inst3.O[1]
+O[2] <= MUX2TO116BIT:inst3.O[2]
+O[3] <= MUX2TO116BIT:inst3.O[3]
+O[4] <= MUX2TO116BIT:inst3.O[4]
+O[5] <= MUX2TO116BIT:inst3.O[5]
+O[6] <= MUX2TO116BIT:inst3.O[6]
+O[7] <= MUX2TO116BIT:inst3.O[7]
+O[8] <= MUX2TO116BIT:inst3.O[8]
+O[9] <= MUX2TO116BIT:inst3.O[9]
+O[10] <= MUX2TO116BIT:inst3.O[10]
+O[11] <= MUX2TO116BIT:inst3.O[11]
+O[12] <= MUX2TO116BIT:inst3.O[12]
+O[13] <= MUX2TO116BIT:inst3.O[13]
+O[14] <= MUX2TO116BIT:inst3.O[14]
+O[15] <= MUX2TO116BIT:inst3.O[15]
+
+
+|ALU|AU:inst
+CARRY <= FA1BIT:inst31.Cout
+SELECT[0] => in1st.IN0
+SELECT[0] => AE:inst1.S0
+SELECT[0] => AE:inst2.S0
+SELECT[0] => AE:inst4.S0
+SELECT[0] => AE:inst6.S0
+SELECT[0] => AE:inst8.S0
+SELECT[0] => AE:inst10.S0
+SELECT[0] => AE:inst12.S0
+SELECT[0] => AE:inst14.S0
+SELECT[0] => AE:inst16.S0
+SELECT[0] => AE:inst18.S0
+SELECT[0] => AE:inst20.S0
+SELECT[0] => AE:inst22.S0
+SELECT[0] => AE:inst24.S0
+SELECT[0] => AE:inst26.S0
+SELECT[0] => AE:inst28.S0
+SELECT[0] => AE:inst30.S0
+SELECT[1] => in1st.IN1
+SELECT[1] => AE:inst1.S1
+SELECT[1] => AE:inst2.S1
+SELECT[1] => AE:inst4.S1
+SELECT[1] => AE:inst6.S1
+SELECT[1] => AE:inst8.S1
+SELECT[1] => AE:inst10.S1
+SELECT[1] => AE:inst12.S1
+SELECT[1] => AE:inst14.S1
+SELECT[1] => AE:inst16.S1
+SELECT[1] => AE:inst18.S1
+SELECT[1] => AE:inst20.S1
+SELECT[1] => AE:inst22.S1
+SELECT[1] => AE:inst24.S1
+SELECT[1] => AE:inst26.S1
+SELECT[1] => AE:inst28.S1
+SELECT[1] => AE:inst30.S1
+A[0] => FA1BIT:inst.A
+A[1] => FA1BIT:inst3.A
+A[2] => FA1BIT:inst5.A
+A[3] => FA1BIT:inst7.A
+A[4] => FA1BIT:inst9.A
+A[5] => FA1BIT:inst11.A
+A[6] => FA1BIT:inst13.A
+A[7] => FA1BIT:inst15.A
+A[8] => FA1BIT:inst17.A
+A[9] => FA1BIT:inst19.A
+A[10] => FA1BIT:inst21.A
+A[11] => FA1BIT:inst23.A
+A[12] => FA1BIT:inst25.A
+A[13] => FA1BIT:inst27.A
+A[14] => FA1BIT:inst29.A
+A[15] => FA1BIT:inst31.A
+B[0] => AE:inst1.Bi
+B[1] => AE:inst2.Bi
+B[2] => AE:inst4.Bi
+B[3] => AE:inst6.Bi
+B[4] => AE:inst8.Bi
+B[5] => AE:inst10.Bi
+B[6] => AE:inst12.Bi
+B[7] => AE:inst14.Bi
+B[8] => AE:inst16.Bi
+B[9] => AE:inst18.Bi
+B[10] => AE:inst20.Bi
+B[11] => AE:inst22.Bi
+B[12] => AE:inst24.Bi
+B[13] => AE:inst26.Bi
+B[14] => AE:inst28.Bi
+B[15] => AE:inst30.Bi
+OVERFLOW <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= FA1BIT:inst.S
+S[1] <= FA1BIT:inst3.S
+S[2] <= FA1BIT:inst5.S
+S[3] <= FA1BIT:inst7.S
+S[4] <= FA1BIT:inst9.S
+S[5] <= FA1BIT:inst11.S
+S[6] <= FA1BIT:inst13.S
+S[7] <= FA1BIT:inst15.S
+S[8] <= FA1BIT:inst17.S
+S[9] <= FA1BIT:inst19.S
+S[10] <= FA1BIT:inst21.S
+S[11] <= FA1BIT:inst23.S
+S[12] <= FA1BIT:inst25.S
+S[13] <= FA1BIT:inst27.S
+S[14] <= FA1BIT:inst29.S
+S[15] <= FA1BIT:inst31.S
+
+
+|ALU|AU:inst|FA1BIT:inst31
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst29
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst27
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst25
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst23
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst21
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst19
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst17
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst15
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst13
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst11
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst9
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst7
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst5
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst3
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|FA1BIT:inst
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Cin => ins1t1.IN0
+Cin => inst2.IN0
+Cin => inst.IN0
+A => ins1t1.IN1
+A => inst3.IN0
+A => inst.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AU:inst|AE:inst1
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst2
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst4
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst6
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst8
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst10
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst12
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst14
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst16
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst18
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst20
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst22
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst24
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst26
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst28
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|AU:inst|AE:inst30
+Yi <= in1st.DB_MAX_OUTPUT_PORT_TYPE
+Bi => inst1.IN0
+Bi => inst4.IN0
+S1 => inst.IN1
+S1 => inst2.IN0
+S1 => inst6.IN0
+S0 => inst2.IN1
+S0 => inst5.IN0
+
+
+|ALU|MUX2TO116BIT:inst3
+O[0] <= MUX2TO1:inst15.Y
+O[1] <= MUX2TO1:inst14.Y
+O[2] <= MUX2TO1:inst13.Y
+O[3] <= MUX2TO1:inst12.Y
+O[4] <= MUX2TO1:inst11.Y
+O[5] <= MUX2TO1:inst10.Y
+O[6] <= MUX2TO1:inst9.Y
+O[7] <= MUX2TO1:inst8.Y
+O[8] <= MUX2TO1:inst7.Y
+O[9] <= MUX2TO1:inst6.Y
+O[10] <= MUX2TO1:inst5.Y
+O[11] <= MUX2TO1:inst4.Y
+O[12] <= MUX2TO1:inst3.Y
+O[13] <= MUX2TO1:inst2.Y
+O[14] <= MUX2TO1:inst1.Y
+O[15] <= MUX2TO1:inst.Y
+SELECT => MUX2TO1:inst15.S
+SELECT => MUX2TO1:inst14.S
+SELECT => MUX2TO1:inst13.S
+SELECT => MUX2TO1:inst12.S
+SELECT => MUX2TO1:inst11.S
+SELECT => MUX2TO1:inst10.S
+SELECT => MUX2TO1:inst9.S
+SELECT => MUX2TO1:inst8.S
+SELECT => MUX2TO1:inst7.S
+SELECT => MUX2TO1:inst6.S
+SELECT => MUX2TO1:inst5.S
+SELECT => MUX2TO1:inst4.S
+SELECT => MUX2TO1:inst3.S
+SELECT => MUX2TO1:inst2.S
+SELECT => MUX2TO1:inst1.S
+SELECT => MUX2TO1:inst.S
+A[0] => MUX2TO1:inst15.A
+A[1] => MUX2TO1:inst14.A
+A[2] => MUX2TO1:inst13.A
+A[3] => MUX2TO1:inst12.A
+A[4] => MUX2TO1:inst11.A
+A[5] => MUX2TO1:inst10.A
+A[6] => MUX2TO1:inst9.A
+A[7] => MUX2TO1:inst8.A
+A[8] => MUX2TO1:inst7.A
+A[9] => MUX2TO1:inst6.A
+A[10] => MUX2TO1:inst5.A
+A[11] => MUX2TO1:inst4.A
+A[12] => MUX2TO1:inst3.A
+A[13] => MUX2TO1:inst2.A
+A[14] => MUX2TO1:inst1.A
+A[15] => MUX2TO1:inst.A
+B[0] => MUX2TO1:inst15.B
+B[1] => MUX2TO1:inst14.B
+B[2] => MUX2TO1:inst13.B
+B[3] => MUX2TO1:inst12.B
+B[4] => MUX2TO1:inst11.B
+B[5] => MUX2TO1:inst10.B
+B[6] => MUX2TO1:inst9.B
+B[7] => MUX2TO1:inst8.B
+B[8] => MUX2TO1:inst7.B
+B[9] => MUX2TO1:inst6.B
+B[10] => MUX2TO1:inst5.B
+B[11] => MUX2TO1:inst4.B
+B[12] => MUX2TO1:inst3.B
+B[13] => MUX2TO1:inst2.B
+B[14] => MUX2TO1:inst1.B
+B[15] => MUX2TO1:inst.B
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst15
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst14
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst13
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst12
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst11
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst10
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst9
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst8
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst4
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst3
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst2
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst1
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|MUX2TO116BIT:inst3|MUX2TO1:inst
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst.IN0
+B => inst1.IN1
+A => in1st.IN1
+
+
+|ALU|LU:inst1
+O[0] <= LE:inst15.Y
+O[1] <= LE:inst14.Y
+O[2] <= LE:inst13.Y
+O[3] <= LE:inst12.Y
+O[4] <= LE:inst11.Y
+O[5] <= LE:inst10.Y
+O[6] <= LE:inst9.Y
+O[7] <= LE:inst8.Y
+O[8] <= LE:inst7.Y
+O[9] <= LE:inst6.Y
+O[10] <= LE:inst5.Y
+O[11] <= LE:inst4.Y
+O[12] <= LE:inst3.Y
+O[13] <= LE:inst2.Y
+O[14] <= LE:inst1.Y
+O[15] <= LE:inst.Y
+A[0] => LE:inst15.A
+A[1] => LE:inst14.A
+A[2] => LE:inst13.A
+A[3] => LE:inst12.A
+A[4] => LE:inst11.A
+A[5] => LE:inst10.A
+A[6] => LE:inst9.A
+A[7] => LE:inst8.A
+A[8] => LE:inst7.A
+A[9] => LE:inst6.A
+A[10] => LE:inst5.A
+A[11] => LE:inst4.A
+A[12] => LE:inst3.A
+A[13] => LE:inst2.A
+A[14] => LE:inst1.A
+A[15] => LE:inst.A
+B[0] => LE:inst15.B
+B[1] => LE:inst14.B
+B[2] => LE:inst13.B
+B[3] => LE:inst12.B
+B[4] => LE:inst11.B
+B[5] => LE:inst10.B
+B[6] => LE:inst9.B
+B[7] => LE:inst8.B
+B[8] => LE:inst7.B
+B[9] => LE:inst6.B
+B[10] => LE:inst5.B
+B[11] => LE:inst4.B
+B[12] => LE:inst3.B
+B[13] => LE:inst2.B
+B[14] => LE:inst1.B
+B[15] => LE:inst.B
+SELECT[0] => LE:inst.S0
+SELECT[0] => LE:inst1.S0
+SELECT[0] => LE:inst2.S0
+SELECT[0] => LE:inst3.S0
+SELECT[0] => LE:inst4.S0
+SELECT[0] => LE:inst5.S0
+SELECT[0] => LE:inst6.S0
+SELECT[0] => LE:inst7.S0
+SELECT[0] => LE:inst8.S0
+SELECT[0] => LE:inst9.S0
+SELECT[0] => LE:inst10.S0
+SELECT[0] => LE:inst11.S0
+SELECT[0] => LE:inst12.S0
+SELECT[0] => LE:inst13.S0
+SELECT[0] => LE:inst14.S0
+SELECT[0] => LE:inst15.S0
+SELECT[1] => LE:inst.S1
+SELECT[1] => LE:inst1.S1
+SELECT[1] => LE:inst2.S1
+SELECT[1] => LE:inst3.S1
+SELECT[1] => LE:inst4.S1
+SELECT[1] => LE:inst5.S1
+SELECT[1] => LE:inst6.S1
+SELECT[1] => LE:inst7.S1
+SELECT[1] => LE:inst8.S1
+SELECT[1] => LE:inst9.S1
+SELECT[1] => LE:inst10.S1
+SELECT[1] => LE:inst11.S1
+SELECT[1] => LE:inst12.S1
+SELECT[1] => LE:inst13.S1
+SELECT[1] => LE:inst14.S1
+SELECT[1] => LE:inst15.S1
+
+
+|ALU|LU:inst1|LE:inst
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst1
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst2
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst3
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst4
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst5
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst6
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst7
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst8
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst9
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst10
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst11
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst12
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst13
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst14
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+
+|ALU|LU:inst1|LE:inst15
+Y <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst7.IN1
+A => inst2.IN0
+B => inst.IN1
+B => inst3.IN0
+B => inst6.IN0
+B => inst9.IN0
+S1 => inst4.IN0
+S1 => inst9.IN2
+S1 => inst8.IN2
+S0 => inst7.IN2
+S0 => inst6.IN1
+S0 => inst5.IN0
+
+

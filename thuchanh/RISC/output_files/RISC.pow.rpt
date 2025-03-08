@@ -1,0 +1,941 @@
+PowerPlay Power Analyzer report for RISC
+Sun Dec 29 21:50:28 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. PowerPlay Power Analyzer Summary
+  3. PowerPlay Power Analyzer Settings
+  4. Indeterminate Toggle Rates
+  5. Operating Conditions Used
+  6. Thermal Power Dissipation by Block
+  7. Thermal Power Dissipation by Block Type
+  8. Thermal Power Dissipation by Hierarchy
+  9. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 10. Current Drawn from Voltage Supplies Summary
+ 11. VCCIO Supply Current Drawn by I/O Bank
+ 12. VCCIO Supply Current Drawn by Voltage
+ 13. Confidence Metric Details
+ 14. Signal Activities
+ 15. PowerPlay Power Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------+
+; PowerPlay Power Analyzer Summary                                                          ;
++----------------------------------------+--------------------------------------------------+
+; PowerPlay Power Analyzer Status        ; Successful - Sun Dec 29 21:50:28 2024            ;
+; Quartus II 64-Bit Version              ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition  ;
+; Revision Name                          ; RISC                                             ;
+; Top-level Entity Name                  ; RISCV1                                           ;
+; Family                                 ; Cyclone II                                       ;
+; Device                                 ; EP2C35F672C6                                     ;
+; Power Models                           ; Final                                            ;
+; Total Thermal Power Dissipation        ; 135.77 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
+; Core Static Thermal Power Dissipation  ; 80.01 mW                                         ;
+; I/O Thermal Power Dissipation          ; 55.76 mW                                         ;
+; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
++----------------------------------------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; PowerPlay Power Analyzer Settings                                                                                                  ;
++----------------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                                     ; Setting                               ; Default Value ;
++----------------------------------------------------------------------------+---------------------------------------+---------------+
+; Use smart compilation                                                      ; Off                                   ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                                ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                                    ; On                                    ; Off           ;
+; Preset Cooling Solution                                                    ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                                        ; None (CONSERVATIVE)                   ;               ;
+; Default Power Toggle Rate                                                  ; 12.5%                                 ; 12.5%         ;
+; Default Power Input I/O Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                                  ; On                                    ; On            ;
+; Use Input Files                                                            ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                                         ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                                      ; Off                                   ; Off           ;
+; Device Power Characteristics                                               ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                                 ; On                                    ; On            ;
+; Specified Junction Temperature                                             ; 25                                    ; 25            ;
+; Ambient Temperature                                                        ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                                ; Off                                   ; Off           ;
+; Board Temperature                                                          ; 25                                    ; 25            ;
+; Enable HPS                                                                 ; Off                                   ; Off           ;
+; Processor Frequency                                                        ; 0.0                                   ; 0.0           ;
++----------------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++------------------------------------+
+; Indeterminate Toggle Rates         ;
++------+-----------------------------+
+; Node ; Reason                      ;
++------+-----------------------------+
+; CLK  ; No valid clock domain found ;
++------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Operating Conditions Used                                               ;
++---------------------------------------------+---------------------------+
+; Setting                                     ; Value                     ;
++---------------------------------------------+---------------------------+
+; Device power characteristics                ; Typical                   ;
+;                                             ;                           ;
+; Voltages                                    ;                           ;
+;     VCCINT                                  ; 1.20 V                    ;
+;     3.3-V LVTTL I/O Standard                ; 3.3 V                     ;
+;                                             ;                           ;
+; Auto computed junction temperature          ; 25.8 degrees Celsius      ;
+;     Ambient temperature                     ; 25.0 degrees Celsius      ;
+;     Junction-to-Case thermal resistance     ; 3.10 degrees Celsius/Watt ;
+;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt ;
+;     Heat Sink-to-Ambient thermal resistance ; 2.80 degrees Celsius/Watt ;
+;                                             ;                           ;
+; Board model used                            ; None                      ;
++---------------------------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block                                                                                                                                                         ;
++-------------------------------------------------+---------------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; Block Name                                      ; Block Type          ; Total Thermal Power ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ;
++-------------------------------------------------+---------------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; TEST_DP:inst|COUNTER4BIT:inst4|inst11           ; Register cell       ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst9            ; Register cell       ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst7            ; Register cell       ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst5            ; Register cell       ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|IMEM:inst3|rom~0                   ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst15           ; Register cell       ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|IMEM:inst3|rom~1                   ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst11~0         ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst9~0          ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst7~0          ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|HAS:inst10|inst7 ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst15~0         ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; TEST_DP:inst|COUNTER4BIT:inst4|inst5~0          ; Combinational cell  ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
+; data_out_ram[15]                                ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[14]                                ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[13]                                ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[12]                                ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[11]                                ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[10]                                ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[9]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[8]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[7]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[6]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[5]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[4]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[3]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[2]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[1]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; data_out_ram[0]                                 ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; ZERO                                            ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; PC                                              ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; REG_SRC                                         ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; REG_EN                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; ALU_SRC                                         ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; EN_MEM                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; W_MEM                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; SHIFT_R_L                                       ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[15]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[14]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[13]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[12]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; A[11]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; A[10]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; A[9]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[8]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[7]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[6]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[5]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; A[4]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[3]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[2]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; A[1]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; A[0]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; ALU_OP[2]                                       ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; ALU_OP[1]                                       ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; ALU_OP[0]                                       ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[15]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; B[14]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[13]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; B[12]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; B[11]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; B[10]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[9]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[8]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[7]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[6]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[5]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; B[4]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; B[3]                                            ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; B[2]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; B[1]                                            ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; B[0]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[15]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; O[14]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; O[13]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[12]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[11]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[10]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[9]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[8]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[7]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; O[6]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[5]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[4]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; O[3]                                            ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; O[2]                                            ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; O[1]                                            ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; O[0]                                            ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[15]                                     ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; OUT_INS[14]                                     ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[13]                                     ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[12]                                     ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; OUT_INS[11]                                     ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; OUT_INS[10]                                     ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; OUT_INS[9]                                      ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[8]                                      ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; OUT_INS[7]                                      ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[6]                                      ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[5]                                      ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; OUT_INS[4]                                      ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[3]                                      ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; OUT_INS[2]                                      ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; OUT_INS[1]                                      ; I/O                 ; 0.11 mW             ; 0.00 mW                     ; 0.11 mW                        ; 0.00 mW                       ;
+; OUT_INS[0]                                      ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[15]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[14]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R0[13]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R0[12]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[9]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R0[8]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[6]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[5]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[4]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[3]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R0[2]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R0[1]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R0[0]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[15]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[14]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[13]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[12]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[9]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[8]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[6]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[5]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[4]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[3]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[2]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R1[1]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R1[0]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[15]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[14]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[13]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[12]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[9]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R2[8]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R2[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[6]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R2[5]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[4]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R2[3]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R2[2]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R2[1]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R2[0]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[15]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[14]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[13]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[12]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[10]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[9]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[8]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[7]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[6]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[5]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[4]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[3]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[2]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R3[1]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R3[0]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[15]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[14]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[13]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[12]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[9]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[8]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R4[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[6]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R4[5]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R4[4]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[3]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R4[2]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R4[1]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R4[0]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[15]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R5[14]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[13]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[12]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[11]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R5[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[9]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R5[8]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[6]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[5]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R5[4]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[3]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[2]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R5[1]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R5[0]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[15]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[14]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[13]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R6[12]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[9]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R6[8]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[6]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[5]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[4]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R6[3]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[2]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[1]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R6[0]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[15]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[14]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R7[13]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R7[12]                                          ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R7[11]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[10]                                          ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[9]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R7[8]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[7]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[6]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[5]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R7[4]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; R7[3]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[2]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[1]                                           ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; R7[0]                                           ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; W_SRC[1]                                        ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; W_SRC[0]                                        ; I/O                 ; 0.12 mW             ; 0.00 mW                     ; 0.12 mW                        ; 0.00 mW                       ;
+; CLK                                             ; I/O                 ; 0.13 mW             ; 0.00 mW                     ; 0.13 mW                        ; 0.00 mW                       ;
+; ~ASDO~                                          ; I/O                 ; 0.13 mW             ; 0.00 mW                     ; 0.13 mW                        ; 0.00 mW                       ;
+; ~nCSO~                                          ; I/O                 ; 0.13 mW             ; 0.00 mW                     ; 0.13 mW                        ; 0.00 mW                       ;
+; ~LVDS150p/nCEO~                                 ; I/O                 ; 0.10 mW             ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;
+; CLK~clkctrl                                     ; Clock control block ; 0.00 mW             ; 0.00 mW                     ; --                             ; 0.00 mW                       ;
++-------------------------------------------------+---------------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                            ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type          ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; I/O                 ; 26.18 mW                          ; 0.00 mW                     ; 26.18 mW                       ; 0.00 mW                       ;    0.000                                                  ;
+; Combinational cell  ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; Register cell       ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; Clock control block ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                         ;
++-----------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node              ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                 ;
++-----------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------+
+; |RISCV1                                 ; 26.18 mW (26.18 mW)                  ; 0.00 mW (0.00 mW)               ; 26.18 mW (26.18 mW)               ; 0.00 mW (0.00 mW)                 ; |RISCV1                                                                                             ;
+;     |hard_block:auto_generated_inst     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|hard_block:auto_generated_inst                                                              ;
+;     |TEST_DP:inst                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst                                                                                ;
+;         |SHIFT_16BIT:inst               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst                                                               ;
+;             |SHIFT16BIT:in1st           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st                                              ;
+;                 |SHIFT8BIT:inst         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst                               ;
+;                     |busmux:inst        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst                   ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst|lpm_mux:$00000    ;
+;                     |busmux:inst2       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst2                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst2|lpm_mux:$00000   ;
+;                     |busmux:inst3       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst3                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst3|lpm_mux:$00000   ;
+;                     |busmux:inst4       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst4                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst4|lpm_mux:$00000   ;
+;                     |busmux:inst5       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst5                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst5|lpm_mux:$00000   ;
+;                     |busmux:inst6       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst6                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst6|lpm_mux:$00000   ;
+;                     |busmux:inst7       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst7                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst7|lpm_mux:$00000   ;
+;                     |busmux:inst8       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst8                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst8|lpm_mux:$00000   ;
+;                     |busmux:inst9       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst9                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst9|lpm_mux:$00000   ;
+;                     |busmux:inst10      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst10                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst10|lpm_mux:$00000  ;
+;                     |busmux:inst11      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst11                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst11|lpm_mux:$00000  ;
+;                     |busmux:inst12      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst12                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst12|lpm_mux:$00000  ;
+;                     |busmux:inst13      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst13                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst13|lpm_mux:$00000  ;
+;                     |busmux:inst14      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst14                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst14|lpm_mux:$00000  ;
+;                     |busmux:inst15      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst15                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst15|lpm_mux:$00000  ;
+;                     |busmux:inst16      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst16                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT8BIT:inst|busmux:inst16|lpm_mux:$00000  ;
+;                 |SHIFT4BIT:inst1        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1                              ;
+;                     |busmux:inst        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst|lpm_mux:$00000   ;
+;                     |busmux:inst2       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst2                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst2|lpm_mux:$00000  ;
+;                     |busmux:inst3       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst3                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst3|lpm_mux:$00000  ;
+;                     |busmux:inst4       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst4                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst4|lpm_mux:$00000  ;
+;                     |busmux:inst5       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst5                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst5|lpm_mux:$00000  ;
+;                     |busmux:inst6       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst6                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst6|lpm_mux:$00000  ;
+;                     |busmux:inst7       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst7                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst7|lpm_mux:$00000  ;
+;                     |busmux:inst8       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst8                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst8|lpm_mux:$00000  ;
+;                     |busmux:inst9       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst9                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst9|lpm_mux:$00000  ;
+;                     |busmux:inst10      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst10                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst10|lpm_mux:$00000 ;
+;                     |busmux:inst11      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst11                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst11|lpm_mux:$00000 ;
+;                     |busmux:inst12      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst12                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst12|lpm_mux:$00000 ;
+;                     |busmux:inst13      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst13                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst13|lpm_mux:$00000 ;
+;                     |busmux:inst14      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst14                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst14|lpm_mux:$00000 ;
+;                     |busmux:inst15      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst15                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst15|lpm_mux:$00000 ;
+;                     |busmux:inst16      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst16                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT4BIT:inst1|busmux:inst16|lpm_mux:$00000 ;
+;                 |SHIFT2BIT:inst2        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2                              ;
+;                     |busmux:inst        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst|lpm_mux:$00000   ;
+;                     |busmux:inst1       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst1                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst1|lpm_mux:$00000  ;
+;                     |busmux:inst2       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst2                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst2|lpm_mux:$00000  ;
+;                     |busmux:inst3       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst3                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst3|lpm_mux:$00000  ;
+;                     |busmux:inst4       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst4                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst4|lpm_mux:$00000  ;
+;                     |busmux:inst5       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst5                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst5|lpm_mux:$00000  ;
+;                     |busmux:inst6       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst6                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst6|lpm_mux:$00000  ;
+;                     |busmux:inst7       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst7                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst7|lpm_mux:$00000  ;
+;                     |busmux:inst8       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst8                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst8|lpm_mux:$00000  ;
+;                     |busmux:inst9       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst9                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst9|lpm_mux:$00000  ;
+;                     |busmux:inst10      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst10                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst10|lpm_mux:$00000 ;
+;                     |busmux:inst11      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst11                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst11|lpm_mux:$00000 ;
+;                     |busmux:inst12      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst12                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst12|lpm_mux:$00000 ;
+;                     |busmux:inst13      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst13                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst13|lpm_mux:$00000 ;
+;                     |busmux:inst14      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst14                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst14|lpm_mux:$00000 ;
+;                     |busmux:inst15      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst15                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT2BIT:inst2|busmux:inst15|lpm_mux:$00000 ;
+;                 |SHIFT1BIT:inst3        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3                              ;
+;                     |busmux:inst        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst                  ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst|lpm_mux:$00000   ;
+;                     |busmux:inst1       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst1                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst1|lpm_mux:$00000  ;
+;                     |busmux:inst2       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst2                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst2|lpm_mux:$00000  ;
+;                     |busmux:inst3       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst3                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst3|lpm_mux:$00000  ;
+;                     |busmux:inst4       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst4                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst4|lpm_mux:$00000  ;
+;                     |busmux:inst5       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst5                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst5|lpm_mux:$00000  ;
+;                     |busmux:inst6       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst6                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst6|lpm_mux:$00000  ;
+;                     |busmux:inst7       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst7                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst7|lpm_mux:$00000  ;
+;                     |busmux:inst8       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst8                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst8|lpm_mux:$00000  ;
+;                     |busmux:inst9       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst9                 ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst9|lpm_mux:$00000  ;
+;                     |busmux:inst10      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst10                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst10|lpm_mux:$00000 ;
+;                     |busmux:inst11      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst11                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst11|lpm_mux:$00000 ;
+;                     |busmux:inst12      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst12                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst12|lpm_mux:$00000 ;
+;                     |busmux:inst13      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst13                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst13|lpm_mux:$00000 ;
+;                     |busmux:inst14      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst14                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst14|lpm_mux:$00000 ;
+;                     |busmux:inst15      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst15                ;
+;                         |lpm_mux:$00000 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|SHIFT16BIT:in1st|SHIFT1BIT:inst3|busmux:inst15|lpm_mux:$00000 ;
+;             |busmux:inst15              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|busmux:inst15                                                 ;
+;                 |lpm_mux:$00000         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SHIFT_16BIT:inst|busmux:inst15|lpm_mux:$00000                                  ;
+;         |ALU:inst1                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|ALU:inst1                                                                      ;
+;             |AU:inst                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|ALU:inst1|AU:inst                                                              ;
+;             |LU:inst1                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|ALU:inst1|LU:inst1                                                             ;
+;             |busmux:inst2               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|ALU:inst1|busmux:inst2                                                         ;
+;                 |lpm_mux:$00000         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|ALU:inst1|busmux:inst2|lpm_mux:$00000                                          ;
+;         |RAM:inst2                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|RAM:inst2                                                                      ;
+;         |IMEM:inst3                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|IMEM:inst3                                                                     ;
+;         |COUNTER4BIT:inst4              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|COUNTER4BIT:inst4                                                              ;
+;             |HAS:inst10                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|COUNTER4BIT:inst4|HAS:inst10                                                   ;
+;         |busmux:inst5                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|busmux:inst5                                                                   ;
+;             |lpm_mux:$00000             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|busmux:inst5|lpm_mux:$00000                                                    ;
+;         |busmux:inst6                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|busmux:inst6                                                                   ;
+;             |lpm_mux:$00000             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|busmux:inst6|lpm_mux:$00000                                                    ;
+;         |SIGNEXTEND:inst7               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SIGNEXTEND:inst7                                                               ;
+;             |busmux:inst                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SIGNEXTEND:inst7|busmux:inst                                                   ;
+;                 |lpm_mux:$00000         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|SIGNEXTEND:inst7|busmux:inst|lpm_mux:$00000                                    ;
+;         |MUX4TO1:inst8                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8                                                                  ;
+;             |busmux:inst                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8|busmux:inst                                                      ;
+;                 |lpm_mux:$00000         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8|busmux:inst|lpm_mux:$00000                                       ;
+;             |busmux:inst2               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8|busmux:inst2                                                     ;
+;                 |lpm_mux:$00000         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8|busmux:inst2|lpm_mux:$00000                                      ;
+;             |busmux:inst3               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8|busmux:inst3                                                     ;
+;                 |lpm_mux:$00000         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|MUX4TO1:inst8|busmux:inst3|lpm_mux:$00000                                      ;
+;         |ADD5BIT:inst10                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|ADD5BIT:inst10                                                                 ;
+;         |TEST_RF:inst12                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12                                                                 ;
+;             |REGISTER16BIT:inst         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst                                              ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst|busmux:inst1                                 ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst|busmux:inst1|lpm_mux:$00000                  ;
+;             |REGISTER16BIT:inst1        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst1                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst1|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst1|busmux:inst1|lpm_mux:$00000                 ;
+;             |REGISTER16BIT:inst2        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst2                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst2|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst2|busmux:inst1|lpm_mux:$00000                 ;
+;             |REGISTER16BIT:inst3        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst3                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst3|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst3|busmux:inst1|lpm_mux:$00000                 ;
+;             |REGISTER16BIT:inst4        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst4                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst4|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst4|busmux:inst1|lpm_mux:$00000                 ;
+;             |REGISTER16BIT:inst5        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst5                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst5|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst5|busmux:inst1|lpm_mux:$00000                 ;
+;             |REGISTER16BIT:inst6        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst6                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst6|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst6|busmux:inst1|lpm_mux:$00000                 ;
+;             |REGISTER16BIT:inst7        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst7                                             ;
+;                 |busmux:inst1           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst7|busmux:inst1                                ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|REGISTER16BIT:inst7|busmux:inst1|lpm_mux:$00000                 ;
+;             |MUX8_1:inst11              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11                                                   ;
+;                 |busmux:inst            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst                                       ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst|lpm_mux:$00000                        ;
+;                 |busmux:inst3           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst3                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst3|lpm_mux:$00000                       ;
+;                 |busmux:inst4           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst4                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst4|lpm_mux:$00000                       ;
+;                 |busmux:inst5           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst5                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst5|lpm_mux:$00000                       ;
+;                 |busmux:inst6           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst6                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst6|lpm_mux:$00000                       ;
+;                 |busmux:inst7           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst7                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst7|lpm_mux:$00000                       ;
+;                 |busmux:inst8           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst8                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst11|busmux:inst8|lpm_mux:$00000                       ;
+;             |MUX8_1:inst12              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12                                                   ;
+;                 |busmux:inst            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst                                       ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst|lpm_mux:$00000                        ;
+;                 |busmux:inst3           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst3                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst3|lpm_mux:$00000                       ;
+;                 |busmux:inst4           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst4                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst4|lpm_mux:$00000                       ;
+;                 |busmux:inst5           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst5                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst5|lpm_mux:$00000                       ;
+;                 |busmux:inst6           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst6                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst6|lpm_mux:$00000                       ;
+;                 |busmux:inst7           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst7                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst7|lpm_mux:$00000                       ;
+;                 |busmux:inst8           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst8                                      ;
+;                     |lpm_mux:$00000     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |RISCV1|TEST_DP:inst|TEST_RF:inst12|MUX8_1:inst12|busmux:inst8|lpm_mux:$00000                       ;
++-----------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++--------------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain             ;
++-----------------+-----------------------+--------------------------+
+; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++-----------------+-----------------------+--------------------------+
+; No clock domain ; 0.00                  ; 0.00                     ;
++-----------------+-----------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Current Drawn from Voltage Supplies Summary                                                                                        ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCINT         ; 80.37 mA                ; 0.00 mA                   ; 80.37 mA                 ; 80.37 mA                         ;
+; VCCIO          ; 11.92 mA                ; 0.00 mA                   ; 11.92 mA                 ; 11.92 mA                         ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; 1        ; 3.3V          ; 1.51 mA             ; 0.00 mA               ; 1.51 mA              ;
+; 2        ; 3.3V          ; 1.44 mA             ; 0.00 mA               ; 1.44 mA              ;
+; 3        ; 3.3V          ; 1.59 mA             ; 0.00 mA               ; 1.59 mA              ;
+; 4        ; 3.3V          ; 1.53 mA             ; 0.00 mA               ; 1.53 mA              ;
+; 5        ; 3.3V          ; 1.41 mA             ; 0.00 mA               ; 1.41 mA              ;
+; 6        ; 3.3V          ; 1.33 mA             ; 0.00 mA               ; 1.33 mA              ;
+; 7        ; 3.3V          ; 1.49 mA             ; 0.00 mA               ; 1.49 mA              ;
+; 8        ; 3.3V          ; 1.62 mA             ; 0.00 mA               ; 1.62 mA              ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 3.3V          ; 11.92 mA                ; 0.00 mA                   ; 11.92 mA                 ; 11.92 mA                         ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                       ;
++----------------------------------------------------------------------------------------+-------------+-------------+------------+---------------+
+; Data Source                                                                            ; Total       ; Pin         ; Registered ; Combinational ;
++----------------------------------------------------------------------------------------+-------------+-------------+------------+---------------+
+; Simulation (from file)                                                                 ;             ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;                                                                                        ;             ;             ;            ;               ;
+; Node, entity or clock assignment                                                       ;             ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;                                                                                        ;             ;             ;            ;               ;
+; Vectorless estimation                                                                  ;             ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 236 (98.7%) ; 222 (98.7%) ; 5 (100.0%) ; 9 (100.0%)    ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 212 (88.7%) ; 211 (93.8%) ; 0 (0.0%)   ; 1 (11.1%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 236 (98.7%) ; 222 (98.7%) ; 5 (100.0%) ; 9 (100.0%)    ;
+;                                                                                        ;             ;             ;            ;               ;
+; Default assignment                                                                     ;             ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 3 (1.3%)    ; 3 (1.3%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;                                                                                        ;             ;             ;            ;               ;
+; Assumed 0                                                                              ;             ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 3 (1.3%)    ; 3 (1.3%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+-------------+-------------+------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                           ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal ; Type ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+(1) The "Signal Activity" Table has been hidden. To show this table, please select the "Write signal activities to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-----------------------------------+
+; PowerPlay Power Analyzer Messages ;
++-----------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit PowerPlay Power Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Dec 29 21:50:27 2024
+Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off RISC -c RISC
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'RISC.sdc'
+Warning (332060): Node: CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332068): No clocks defined in design.
+Info (223000): Starting Vectorless Power Activity Estimation
+Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
+Info (223001): Completed Vectorless Power Activity Estimation
+Warning (218001): Found 221 output pins without output pin load capacitance assignment
+    Warning (218002): Pin "data_out_ram[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "data_out_ram[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "ZERO" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "PC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "REG_SRC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "REG_EN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "ALU_SRC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "EN_MEM" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "W_MEM" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "SHIFT_R_L" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "A[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "ALU_OP[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "ALU_OP[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "ALU_OP[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "B[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "O[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "OUT_INS[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R2[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R3[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R4[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R5[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R6[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "R7[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "W_SRC[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "W_SRC[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 135.77 mW
+Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 225 warnings
+    Info: Peak virtual memory: 4573 megabytes
+    Info: Processing ended: Sun Dec 29 21:50:28 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

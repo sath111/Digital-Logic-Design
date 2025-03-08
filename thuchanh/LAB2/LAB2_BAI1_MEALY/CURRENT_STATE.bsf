@@ -1,0 +1,57 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 248 200)
+	(text "CURRENT_STATE" (rect 40 72 141 86)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 80 25 92)(font "Arial" ))
+	(port
+		(pt 0 64)
+		(input)
+		(text "D[1..0]" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "D[1..0]" (rect 21 59 57 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 88 136)
+		(input)
+		(text "CLK" (rect 0 40 23 54)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 80 87 94 110)(font "Arial" (font_size 8))(vertical))
+		(line (pt 88 136)(pt 88 120))
+	)
+	(port
+		(pt 88 0)
+		(input)
+		(text "RST" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "RST" (rect 80 25 94 48)(font "Arial" (font_size 8))(vertical))
+		(line (pt 88 0)(pt 88 16))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "Q[1..0]" (rect 56 0 93 14)(font "Arial" (font_size 8)))
+		(text "Q[1..0]" (rect 126 59 163 73)(font "Arial" (font_size 8)))
+		(line (pt 184 64)(pt 168 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 120))
+	)
+)
