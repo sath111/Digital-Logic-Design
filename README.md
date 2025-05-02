@@ -1,4 +1,4 @@
-Digital Logic Design
+**Digital Logic Design**
 
 #DEMBIT1V3 - Accumulator from 1 to n
 * Designed a simple arithmetic circuit that computes the sum of all integers from 1 to n using a sequential adder and a counter. This module is useful in implementing basic arithmetic operations or loop accumulators in digital systems.
