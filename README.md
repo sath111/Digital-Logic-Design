@@ -9,7 +9,7 @@ Digital Logic Design
 #QUEUERAM - 8x8 QUEUE(FIFO)
 * Implemented a 16-word, 8 bit First-In-First-Out(FIFO) queue using RAM. The design supports enqueue and dequeue operations and maintains data order, which is critical in buffering and communication applications.
 
-#SRA - Square Root Approximation Circuit (Fully Featured Design)
+#SRA - Square Root Approximation Circuit (Fully Featured Design): 
 This project implements a square root approximation circuit using several design techniques to reduce resource usage and improve processing speed:
  * Register Sharing: reuses storage registers across different states to reduce the number of register and save area.
  * Bus Sharing: shares internal buses between functional blocks to simplify connections, reduce the number of multiplexers (mux) used, and make the design easier to scale,
