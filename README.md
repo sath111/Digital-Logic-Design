@@ -19,3 +19,5 @@ This project implements a square root approximation circuit using several design
  * Datapath Pipelining: adds pipeline stages across the entire data path to enable overlapping execution and faster operation.
  * Combined Pipelining (Functional Unit & Datapath Pipelining): combines both types of pipelining to get better performance and use resources mor efficiently.
 
+#thuchanh - Overview of the RISC 16-bit Single-Cycle Processor
+* This is a 16-bit processor designed based on the RISC architecture and single-cycle execution model. It supports most basic instructions, including arithmetic, logic, memory access, and control flow. Each instruction is completed in a single clock cycle by integrating all functional stages - instruction fetch, decode, execute, memory access, and write-back - into one unified cycle. This design prioritizes simplicity and clarity, making it suitable for small-scale embedded applications.
