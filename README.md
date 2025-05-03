@@ -5,6 +5,7 @@ In addition to the SRA circuit, the project also includes the design of basic ci
 
 The project further extends into processor design, with the implementation of a custom 16-bit processor built on RISC principles. This processor serves as a practical foundation for exploring control logic, datapath construction, and instruction execution in a simplified architecture.  
 
+
 ## **DEMBIT1V3 - Accumulator from 1 to n**
 * Designed a simple arithmetic circuit that computes the sum of all integers from 1 to n using a sequential adder and a counter. This module is useful in implementing basic arithmetic operations or loop accumulators in digital systems.
 
