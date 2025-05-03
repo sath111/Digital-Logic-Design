@@ -1,7 +1,7 @@
 # **DIGITAL LOGIC DESIGN**  
-This project is implemented using Quartus, with the aim of designing and simulating digital circuits ranging from basic to complex. The SRA (Square Root Approximation) circuit is one of the key designs in this project. To optimize performance, the SRA circuit is designed using RTL (Register Transfer Level) techniques and pipeline, improving processing speed and reducing latency.  
+This project is implemented using Quartus, with the aim of designing and simulating digital circuits ranging from basic to complex. One of the key designs in this project is the SRA (Square Root Approximation) circuit, which is optimized using RTL techniques and pipelining to improve performance and reduce latency.  
 
-In addition to the SRA circuit, the project also includes the design of basic circuits such as counter, RAM, FIFO (queue), and LIFO (stack). These circuits are implemented using design techniques from basic to complex systems, which help improve digital circuit design skills and simulation.  
+In addition to the SRA circuit, the project also includes the design of basic circuits such as counter, RAM, FIFO (queue), and LIFO (stack). These designs range from basic to more advanced, helping to build a stronger foundation in digital design and simulation. 
 
 The project further extends into processor design, with the implementation of a custom 16-bit processor built on RISC principles. This processor serves as a practical foundation for exploring control logic, datapath construction, and instruction execution in a simplified architecture.  
 
